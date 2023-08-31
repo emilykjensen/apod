@@ -4,7 +4,7 @@ import os
 import ctypes
 import winreg
 
-API_KEY = "af0YZIGxtX4TDwRg3y4LROiU24ap2jEUgX1EJi9i"
+API_KEY = "YOUR_API_KEY_HERE"
 
 def set_wallpaper(image_path):
     ctypes.windll.user32.SystemParametersInfoW(20, 0, image_path, 0)
