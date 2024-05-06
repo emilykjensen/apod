@@ -2,7 +2,7 @@
 
 # Setup
 - Clone this repo
-- Get your own [NASA API key](https://api.nasa.gov/) and paste it into the script
+- Get your own [NASA API key](https://api.nasa.gov/) and paste it into a .env file
 - Set this script to run every day using your preferred method (or see below)
 
 # Running the script
