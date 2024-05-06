@@ -3,8 +3,10 @@ import requests
 import os
 import ctypes
 import winreg
+import dotenv
 
-API_KEY = "YOUR_API_KEY_HERE"
+config = dotenv.dotenv_values(".env")
+api_key = config["API_KEY"]
 
 def set_wallpaper(image_path):
     ctypes.windll.user32.SystemParametersInfoW(20, 0, image_path, 0)
@@ -17,7 +19,7 @@ def set_wallpaper_style():
 
 
 def fetch_nasa_apod():
-    url = f"https://api.nasa.gov/planetary/apod?api_key={API_KEY}"
+    url = f"https://api.nasa.gov/planetary/apod?api_key={api_key}"
     
     response = requests.get(url)
     data = response.json()
@@ -34,4 +36,3 @@ def fetch_nasa_apod():
 if __name__ == "__main__":
     set_wallpaper_style()
     fetch_nasa_apod()
-    
